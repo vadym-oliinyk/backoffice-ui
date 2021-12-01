@@ -1,0 +1,6 @@
+*.stories.js
+./config
+.storybook
+.idea
+Dockerfile
+Dockerfiles
