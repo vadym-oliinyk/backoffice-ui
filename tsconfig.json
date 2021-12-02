@@ -1,5 +1,6 @@
 {
   "compilerOptions": {
+    "typeRoots": ["@types", "./node_modules/@types"],
     "target": "es5",
     "lib": ["dom", "dom.iterable", "esnext"],
     "baseUrl": "./",
@@ -16,9 +17,9 @@
     "isolatedModules": false,
     "noEmit": false,
     "jsx": "react-jsx",
-    "sourceMap": true,
+    "sourceMap": false,
     "declaration": true,
     "declarationDir": "./dist"
   },
-  "include": ["src"]
+  "include": ["src/**/*"]
 }

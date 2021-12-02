@@ -4,9 +4,10 @@ const BundleAnalyzerPlugin =
   require("webpack-bundle-analyzer").BundleAnalyzerPlugin;
 
 const config = {
+  target: 'web',
   entry: {
-    core: "./main.ts",
-    themes: "./theme.ts",
+    core: "./core.ts",
+    theme: "./theme.ts",
   },
   output: {
     path: path.resolve(__dirname, "../dist"),
@@ -18,9 +19,16 @@ const config = {
   module: {
     rules: [
       {
-        test: /\.(js|jsx|tsx|ts)$/,
-        loader: "ts-loader",
-        exclude: /node_modules/,
+        test: /\.ts(x?)$/,
+        exclude: [/node_modules/],
+        use: [
+          {
+            loader: 'babel-loader',
+          },
+          {
+            loader: 'ts-loader',
+          },
+        ],
       },
     ],
   },
