@@ -1,7 +1,8 @@
 {
   "name": "amomedia-ui",
   "description": "amomedia-ui",
-  "main": "./dist/lib.js",
+  "main": "./dist",
+  "typings": "./dist",
   "scripts": {
     "test": "jest --watchAll --ci",
     "storybook": "start-storybook -p 6006",
